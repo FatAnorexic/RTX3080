@@ -7,10 +7,11 @@ browser = webdriver.Chrome('Driver path') """This is where you'll key in the dri
                                              the path should look like 'C:\\user\\...\\chromdriver.exe'. For mac and unix based users remember it 
                                              should look like 'drive/user/.../chromedriver.exe'"""
 
-##Grab best buy webpage
+#Grab best buy webpage
 browser.get("https://www.bestbuy.com/site/nvidia-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-graphics-card-titanium-and-black/6429440.p?skuId=6429440")
-##TestBed
-#browser.get("https://www.bestbuy.com/site/insignia-aaa-batteries-8-pack/5491600.p?skuId=5491600")
+#TestBed
+#browser.get("https://www.bestbuy.com/site/insignia-aaa-batteries-8-pack/5491600.p?skuId=5491600") #Use this to Test the program. It won't buy it, but should get u to the end. 
+#Just remove the hashtage above, and place one in front of the actual RTX SKU page. 
 buyButton = False
 
 while not buyButton:
