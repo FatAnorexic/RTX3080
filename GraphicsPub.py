@@ -2,7 +2,7 @@ import time
 from selenium import webdriver
 
 ##Using the Chromedriver to talk it webpage. Other Explorers may not need this, they might see SeleniumDoc
-browser = webdriver.Chrome('C:\\Users\\Alexb\\OneDrive\\Desktop\\Coding Python\\Computat Phys\\Side Proj\\chromedriver.exe')
+browser = webdriver.Chrome('Driver path')
 
 ##Grab best buy webpage
 browser.get("https://www.bestbuy.com/site/nvidia-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-graphics-card-titanium-and-black/6429440.p?skuId=6429440")
