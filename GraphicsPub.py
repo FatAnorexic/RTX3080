@@ -1,5 +1,9 @@
 import time
 from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+
 
 #This has been tested using chrome, I have not tested it with any other web browser, be sure to consult slenium doc for more. 
 browser = webdriver.Chrome('Driver path') """This is where you'll key in the drivever path where you installed the chromedriver for selenium.
@@ -39,10 +43,11 @@ while not buyButton:
         print('The buy Button was clicked')
         addToCartBtn.click()
         #time.sleep(3)
-        plsWaitBtn = browser.find_element_by_class_name("overlayTrigger")
+        element = WebDriverWait(browser, 1).until(EC.element_to_be_clickable((By.CLASS_NAME, "btn-primary"))) #Trying something new. 
+        """plsWaitBtn = browser.find_element_by_class_name("overlayTrigger")
         while plsWaitBtn == True:
             time.sleep(1)
-        addToCartBtn.click()
+        addToCartBtn.click()"""
         #time.sleep(2)
         buyButton=True
 
